@@ -1,5 +1,5 @@
 {
-  "name": "node-js-sample",
+  "name": "fiteon",
   "version": "0.0.2",
   "description": "a sample node.js app for heroku",
   "main": "web.js",
@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "sequelize": "~2.0.0-beta1",
     "express": "~3.3.4"
   },
   "engines": {

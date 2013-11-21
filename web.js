@@ -1,7 +1,7 @@
 var express = require('express');
 var fs = require('fs');
 var app = express();
-// var url = require("url");
+var url = require("url");
 var Sequelize = require("sequelize")
 
 app.configure(function(){
