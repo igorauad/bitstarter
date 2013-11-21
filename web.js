@@ -1,7 +1,8 @@
 var express = require('express');
 var fs = require('fs');
 var app = express();
-var url = require("url");
+// var url = require("url");
+var Sequelize = require("sequelize")
 
 app.configure(function(){
     app.use('/public', express.static(__dirname + "/public"));
@@ -14,17 +15,14 @@ app.use(express.logger());
 app.use(express.bodyParser());
 
 app.get('/', function(request, response) {
-    var buffer = fs.readFileSync('signup.html');
-    response.send(buffer.toString());
-});
-
-app.get('/index', function(request, response) {
     var buffer = fs.readFileSync('index.html');
     response.send(buffer.toString());
 });
  
 app.post('/preRegister', function(req, res) {
     var name = req.body.inputName;
+    var email = req.body.inputEmail;
+    console.log("Register request from " + name + " (" + email + ")");
     var buffer = fs.readFileSync('index.html');
     res.send(buffer.toString());
 });
