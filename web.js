@@ -11,6 +11,9 @@ app.configure(function(){
 /* Middleware for logging:  */
 app.use(express.logger());
 
+/* Favicon */
+app.use(express.favicon(__dirname + '/public/imgs/favicon_2.ico')); 
+
 /* Middleware for parsing post body */
 app.use(express.bodyParser());
 
