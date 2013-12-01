@@ -4,15 +4,14 @@ var app = express();
 var url = require("url");
 var Sequelize = require("sequelize")
 
-app.configure(function(){
-    app.use('/public', express.static(__dirname + "/public"));
-});
+/* Serve files in public */
+app.use('/public', express.static(__dirname + "/public"));
 
 /* Middleware for logging:  */
 app.use(express.logger());
 
 /* Favicon */
-app.use(express.favicon(__dirname + '/public/imgs/favicon_2.ico')); 
+app.use(express.favicon(__dirname + '/public/imgs/favicon.ico')); 
 
 /* Middleware for parsing post body */
 app.use(express.bodyParser());
